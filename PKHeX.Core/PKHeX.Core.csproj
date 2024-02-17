@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
     <Description>Pokémon C# Class Library</Description>
     <RootNamespace>PKHeX.Core</RootNamespace>
   </PropertyGroup>
