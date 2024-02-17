@@ -36,6 +36,8 @@ PKHeX is a Windows Forms application which requires [.NET 8.0](https://dotnet.mi
 
 The executable can be built with any compiler that supports C# 12.
 
+On Linux, build with `EnableWindowsTargeting=true dotnet publish --configuration Release --output ./publish --self-contained true` and navigate to the publish folder for PKHeX.exe.
+
 ### Build Configurations
 
 Use the Debug or Release build configurations when building. There isn't any platform specific code to worry about!
