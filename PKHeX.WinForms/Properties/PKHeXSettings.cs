@@ -215,8 +215,11 @@ public sealed class LegalitySettings : IParseSettings
     [LocalizedDescription("Severity to flag a Legality Check if it is a nicknamed Mystery Gift the player cannot normally nickname.")]
     public Severity NicknamedMysteryGift { get; set; } = Severity.Fishy;
 
-    [LocalizedDescription("Severity to flag a Legality Check if the RNG Frame Checking logic does not find a match.")]
-    public Severity RNGFrameNotFound { get; set; } = Severity.Fishy;
+    [LocalizedDescription("Severity to flag a Legality Check if the RNG Frame Checking logic does not find a match for Generation 3 encounters.")]
+    public Severity RNGFrameNotFound3 { get; set; } = Severity.Fishy;
+
+    [LocalizedDescription("Severity to flag a Legality Check if the RNG Frame Checking logic does not find a match for Generation 4 encounters.")]
+    public Severity RNGFrameNotFound4 { get; set; } = Severity.Invalid;
 
     [LocalizedDescription("Severity to flag a Legality Check if Pokémon from Gen1/2 has a Star Shiny PID.")]
     public Severity Gen7TransferStarPID { get; set; } = Severity.Fishy;
@@ -225,7 +228,7 @@ public sealed class LegalitySettings : IParseSettings
     public Severity Gen8MemoryMissingHT { get; set; } = Severity.Fishy;
 
     [LocalizedDescription("Severity to flag a Legality Check if the HOME Tracker is Missing")]
-    public Severity Gen8TransferTrackerNotPresent { get; set; } = Severity.Fishy;
+    public Severity HOMETransferTrackerNotPresent { get; set; } = Severity.Invalid;
 
     [LocalizedDescription("Severity to flag a Legality Check if Pokémon has a Nickname matching another Species.")]
     public Severity NicknamedAnotherSpecies { get; set; } = Severity.Fishy;
@@ -379,6 +382,9 @@ public sealed class SlotWriteSettings
 
     [LocalizedDescription("Automatically adapt the PKM Info to the Save File (Handler, Format)")]
     public bool SetUpdatePKM { get; set; } = true;
+
+    [LocalizedDescription("Automatically increment the Save File's counters for obtained Pokémon (eggs/captures) when injecting a PKM.")]
+    public bool SetUpdateRecords { get; set; } = true;
 
     [LocalizedDescription("When enabled and closing/loading a save file, the program will alert if the current save file has been modified without saving.")]
     public bool ModifyUnset { get; set; } = true;
